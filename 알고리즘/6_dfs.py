@@ -34,10 +34,11 @@ for tc in range(1, T + 1):
         for d in dirs:
             ni, nj = cur[0] + d[0], cur[1] + d[1]
             if 0 <= ni < N and 0 <= nj < N:
-                if arr[ni][nj] == 0:
+                dis_map[ni][nj] = min(dis_map[ni][nj], dis_map[cur[0]][cur[1]] + 1)
+                if arr[ni][nj] in [0, 3]:
                     arr[ni][nj] = 1  # 통로
                     Q.append((ni, nj))
-                    dis_map[ni][nj] = min(dis_map[ni][nj], dis_map[cur[0]][cur[1]] + 1)
+                    
                     
                 
     print(f'#{tc} {result}')
