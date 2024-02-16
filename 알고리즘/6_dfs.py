@@ -7,16 +7,20 @@ for tc in range(1, T + 1):
     N = int(input())
     arr = [list(map(int, input())) for _ in range(N)]
     Q = []
+    start = tuple()
+    
     for i in range(N):
         for j in range(N):
             if arr[i][j] == 2:
                 start = (i, j)  # 시작점 찾기
                 break
+        if start :
+            break
                 
-    visited = [[0] * N for _ in range(N)]       # 탐색 깊이 저장 용도로 사용
+    dis_map = [[1e9] * N for _ in range(N)]    # 미로의 각 좌표마다 최소 이동 거리 저장
+    dis_map[start[0]][start[1]] = 0           # 시작 좌표의 거리를 0으로 초기화
     result = 0
 
-    visited[start[0]][start[1]] = 1             # 탐색 깊이 저장
     Q.append(start)
     while Q:
         cur = Q.pop(0)
