@@ -41,3 +41,11 @@ a = [(1,2)]
 
 b, c = a.pop(0)
 print(b, c)
+#%%
+list1 = [1,2,3,4,5,6,7]
+exlist = [0]*1
+for i in range(0):
+    print(i)
+#%%
+str1 = 'abcd'
+print('e' + str1)
