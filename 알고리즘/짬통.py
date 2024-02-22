@@ -49,3 +49,7 @@ for i in range(0):
 #%%
 str1 = 'abcd'
 print('e' + str1)
+
+# %%
+list1 = [1,0,0,0,0]
+print(all(list1))
