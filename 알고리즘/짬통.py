@@ -51,5 +51,11 @@ str1 = 'abcd'
 print('e' + str1)
 
 # %%
-list1 = [1,0,0,0,0]
-print(all(list1))
+list1 = ['0000','0000','0000','1111','1111','0011']
+print(set(list1))
+
+#%%
+
+arr = [[1,2,3],[4,5,6],[7,8,9]]
+new_arr =list(map(list,zip(*arr)))
+print(new_arr)
