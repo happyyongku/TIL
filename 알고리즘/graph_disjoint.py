@@ -10,7 +10,9 @@ def find_set(x):  # 대표자(루트)를 찾는 함수
     
     if parent[x] == x:
         return x
-    return find_set(parent[x])
+    # return find_set(parent[x])
+    parent[x] = find_set(parent[x])
+    return parent[x]
 
 def union(x, y):
     root_x, root_y = find_set(x), find_set(y)
