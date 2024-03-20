@@ -30,14 +30,12 @@ def union(x, y):
 parent, rank = make_set(6)  # 1~6번 노드
 union(1,3)
 union(2,3)
-union(3,4)
+union(2,4)
 
 union(5,6)
+
 print(parent)
 
-target = 4
-print(find_set(4) == find_set(6))
-print(find_set(4) == find_set(1))
 
 union(4, 6)
 print(parent, rank)
